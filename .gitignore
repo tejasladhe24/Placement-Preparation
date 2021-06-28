@@ -34,4 +34,4 @@
 
 # Custom files
 *.md
-*.pdf
+#*.pdf
