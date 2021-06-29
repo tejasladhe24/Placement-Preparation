@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <utility>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -38,20 +39,22 @@ void findPair(vector<int> arr, int sum)
 
 int main()
 {
-    int n = 6;
-    // scanf("%d", &n);
-    vector<int> arr(n);
+    string input;
+    getline(cin, input);
+    stringstream ss(input);
+    string temp;
 
-    // for (int i = 0; i < n; i++)
-    // {
-    //     scanf("%d", &arr[i]);
-    // }
+    vector<int> arr;
 
-    int sum = 0;
-    // scanf("%d", &sum);
+    while (getline(ss, temp, ' '))
+    {
+        arr.push_back(stoi(temp));
+    }
 
-    arr = {8, 7, 2, 5, 3, 1};
-    sum = 10;
+    int sum;
+    scanf("%d", &sum);
+
+    // input example = 8 7 2 5 3 1 ; sum = 10
 
     findPair(arr, sum);
 
