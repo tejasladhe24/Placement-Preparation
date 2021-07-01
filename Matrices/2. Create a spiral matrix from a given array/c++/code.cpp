@@ -39,15 +39,19 @@ vector<int> createArray(int m, int n)
     cin >> ws; // stream out any whitespace
     getline(cin, input);
     stringstream ss(input);
-    getline(ss, temp, ' ');
-    arr.push_back(stoi(temp));
+
+    for (int i = 0; i < m * n; i++)
+    {
+        getline(ss, temp, ' ');
+        arr[i] = stoi(temp);
+    }
 
     return arr;
 }
 
 vector<vector<int>> createSpiral(vector<int> arr, int m, int n)
 {
-    vector<vector<int>> matrix;
+    vector<vector<int>> matrix(m, vector<int>(n));
 
     int idx = 0;
     int s = 0;
@@ -101,8 +105,6 @@ int main()
 
     vector<int> arr = createArray(m, n);
     vector<vector<int>> matrix = createSpiral(arr, m, n);
-
-    // printMatrix(matrix);
 
     printMatrix(matrix);
 
