@@ -35,3 +35,4 @@
 # Custom files
 *.md
 #*.pdf
+.vscode
