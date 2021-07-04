@@ -5,7 +5,7 @@ public class Code {
 
     public static void printV(int[] v) {
         for (int i = 0; i < v.length; i++) {
-            System.out.println(v[i] + " ");            
+            System.out.print(v[i] + " ");            
         }
         System.out.println("\n");            
     }
@@ -28,10 +28,7 @@ public class Code {
         return false;
     }
 
-    public static void main(String[] args) throws Exception {
-
-        // input example = 3 4 -7 3 1 3 1 -4 -2 -2
-        
+    public static void main(String[] args) throws Exception {        
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
 
@@ -58,3 +55,4 @@ public class Code {
 
     }
 }
+// input example = 3 4 -7 3 1 3 1 -4 -2 -2

@@ -8,18 +8,21 @@ public class Code {
     public static Scanner sc = new Scanner(System.in);
     
     public static void printMatrix(int[][] matrix) {
+        System.out.println("\n");
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
-                System.out.println(matrix[i][j] + " ");
+                System.out.print(matrix[i][j] + "\t");
             }
             System.out.println("\n");
         }
     }
 
     public static void printList(List<Integer> arr) {
+        System.out.println("\n");
         for (int i = 0; i < arr.size(); i++) {
-            System.out.println(arr.get(i) + " ");
+            System.out.print(arr.get(i) + " ");
         }
+        System.out.println("\n");
     }
 
     public static int[][] createMatrix(int m, int n) {
@@ -90,6 +93,7 @@ public class Code {
         List<Integer> arr = Spiral(matrix);
 
         printList(arr);
+        printMatrix(matrix);
 
         sc.close();
 

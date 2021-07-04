@@ -7,9 +7,11 @@ public class Code {
     public static Scanner sc = new Scanner(System.in);
 
     public static void printArray(List<Integer> arr) {
+        System.out.print("\n");
         for (int i = 0; i < arr.size(); i++) {
-            System.out.println(arr.get(i) + " ");
+            System.out.print(arr.get(i) + " ");
         }
+        System.out.print("\n");
     }
 
     public static List<Integer> binSort(List<Integer> arr) {

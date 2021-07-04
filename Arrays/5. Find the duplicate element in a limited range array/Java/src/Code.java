@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 public class Code {
     public static void printArray(List<Integer> arr) {
         for (int i = 0; i < arr.size(); i++) {
-            System.out.println(arr.get(i) + " ");
+            System.out.print(arr.get(i) + " ");
         }
         System.out.println("\n");
     }
@@ -36,3 +36,5 @@ public class Code {
         sc.close();
     }
 }
+
+// Input example - 1 2 3 4 2 2 3 4 1

@@ -85,6 +85,30 @@ public class Code {
 
         return matrix;
     }
+
+    public static int[][] Spiral(List<Integer> arr, int m, int n) {
+        return createSpiral(arr, m, n);
+    }
+
+
+    public static List<Integer> shiftArray(List<Integer> arr, int steps) {
+        List<Integer> temp = new ArrayList<>(arr.size());
+
+        for (int i = arr.size()-steps; i < arr.size(); i++) {
+            temp.add(arr.get(i));
+        }
+
+        for (int i = 0; i < arr.size()-steps; i++) {
+            temp.add(arr.get(i));
+        }
+
+        return temp;
+    }
+    
+    public static int[][] shiftedSpiral(List<Integer> arr, int m, int n) {
+        arr = shiftArray(arr, 1);
+        return createSpiral(arr, m, n);
+    }
     public static void main(String[] args) throws Exception {
         System.out.print("m: ");
         int m = sc.nextInt();
@@ -92,9 +116,11 @@ public class Code {
         int n = sc.nextInt();
         List<Integer> arr = createList(m, n);
 
-        int[][] matrix = createSpiral(arr, m, n);
+        int[][] matrix1 = Spiral(arr, m, n);
+        int[][] matrix2 = shiftedSpiral(arr, m, n);
 
-        printMatrix(matrix);
+        printMatrix(matrix1);
+        printMatrix(matrix2);
 
         sc.close();
 

@@ -14,28 +14,25 @@ public class Hashing {
 
             hashMap.put(arr[i],i);
         }
-
-        
     }
 
     public static void main(String[] args) throws Exception {
-        // Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        // String array_str = sc.nextLine();
-        // StringTokenizer stringTokenizer = new StringTokenizer(array_str);
-        // int n = stringTokenizer.countTokens();
+        String array_str = sc.nextLine();
+        StringTokenizer stringTokenizer = new StringTokenizer(array_str);
+        int n = stringTokenizer.countTokens();
 
-        // int[] arr = new int[n];
+        int[] arr = new int[n];
 
-        // for (int i = 0; i < arr.length; i++) {
-        //     arr[i] = Integer.parseInt((String) stringTokenizer.nextElement());
-        // }
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = Integer.parseInt((String) stringTokenizer.nextElement());
+        }
 
-        // int sum = sc.nextInt();
-
-        int[] arr = {8,7,2,5,3,1};
-        int sum = 10;
+        int sum = sc.nextInt();
 
         findPair(arr, sum);
+
+        sc.close();
     }
 }
