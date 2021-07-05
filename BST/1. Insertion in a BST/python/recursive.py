@@ -1,12 +1,12 @@
 # Install binarytree library for more flexibility: pip install binarytree
-# from binarytree import Node
+from binarytree import Node
 
-class Node:
-    left = None
-    right = None
+# class Node:
+#     left = None
+#     right = None
 
-    def __init__(self,value):
-        self.value = value
+#     def __init__(self,value):
+#         self.value = value
 
 def recursiveInsert(root, key):
     if root is None:
@@ -22,12 +22,11 @@ def recursiveInsert(root, key):
 def ascending(root):
     if root is None:
         return
-    
     ascending(root.left)
     print(root.value, end=' ')
     ascending(root.right)
 
-keys = [15, 10, 8, 20, 12, 16, 25,30]
+keys = [15, 10, 8, 20, 12, 16, 25, 30]
 
 
 root = None
@@ -37,4 +36,4 @@ for key in keys:
 
 ascending(root)
 
-# print(root)  # Use this with imported Node class to print out tree data structure
+print(root)  # Use this with imported Node class to print out tree data structure

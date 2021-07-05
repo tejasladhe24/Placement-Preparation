@@ -5,25 +5,14 @@ public class Recursive {
             return new Node(key);
         }
 
-        if (key < root.getValue()) {
-            root.setLeft(recursiveInsert(root.getLeft(), key));
+        if (key < root.value) {
+            root.left = recursiveInsert(root.left, key);
         }
         else {
-            root.setRight(recursiveInsert(root.getRight(), key));
+            root.right = recursiveInsert(root.right, key);
         }
 
         return root;
-    }
-
-    
-    public static void ascending(Node root) {
-        if (root == null) {
-            return;
-        }
-
-        ascending(root.getLeft());
-        System.out.print(root.getValue() + " ");
-        ascending(root.getRight());
     }
 
     public static void main(String[] args) throws Exception {
@@ -34,6 +23,6 @@ public class Recursive {
             root = recursiveInsert(root, keys[i]);
         }
 
-        ascending(root);
+        root.ascending(root);
     }
 }

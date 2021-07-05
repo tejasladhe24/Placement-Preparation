@@ -9,32 +9,22 @@ public class Iterative {
 
         while(curr != null) {
             parent = curr;
-            if (key < curr.getValue()) {
-                curr = curr.getLeft();
+            if (key < curr.value) {
+                curr = curr.left;
             }
             else {
-                curr = curr.getRight();
+                curr = curr.right;
             }
         }
 
-        if (key < parent.getValue()) {
-            parent.setLeft(new Node(key));
+        if (key < parent.value) {
+            parent.left = new Node(key);
         }
         else {
-            parent.setRight(new Node(key));
+            parent.right = new Node(key);
         }
 
         return root;
-    }
-
-    public static void ascending(Node root) {
-        if (root == null) {
-            return;
-        }
-
-        ascending(root.getLeft());
-        System.out.print(root.getValue() + " ");
-        ascending(root.getRight());
     }
 
     public static void main(String args[]) {
@@ -46,7 +36,7 @@ public class Iterative {
             root = iterativeInsert(root, keys[i]);
         }
 
-        ascending(root);
+        root.ascending(root);
         
     }
 }
